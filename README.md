@@ -27,4 +27,13 @@
 To hash a string, simply provide the string as an argument:
 
 ```sh
-./target/release/bcryptool "my_password"
+bcryptool "my_password"
+```
+
+### Verifying a string against a hash
+
+To verify if a string matches a provided bcrypt hash, use the --compare flag:
+
+```sh
+bcryptool --compare "$2y$12$NUnwvTu7dA2qMtP9/.EMvu5S8F52vDrAWX8VeiKszxM4wKYaZ.mE." "my_password"
+```
